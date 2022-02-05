@@ -1,0 +1,5 @@
+# Windows - Connect your android device using adb wirelessly.
+
+taskkill /F /IM adb.exe
+"%localappdata%\Android\Sdk\platform-tools\adb.exe" tcpip 5555
+"%localappdata%\Android\Sdk\platform-tools\adb.exe" connect 192.168.1."%1"
