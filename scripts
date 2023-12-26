@@ -3,3 +3,11 @@
 taskkill /F /IM adb.exe
 "%localappdata%\Android\Sdk\platform-tools\adb.exe" tcpip 5555
 "%localappdata%\Android\Sdk\platform-tools\adb.exe" connect 192.168.1."%1"
+
+# Use wget to download all files within a directory
+wget -r -np -l0 -R "index.html*" URL
+
+-r = recursive
+-np = no parent directories
+-R = no temp html files
+-l0 = depth level (0 means infinity, default is 5)
